@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ECommerce.Models.Product>
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+	<div class="row">
+	@*	<div class="col-md-3">
+			<div class="card">
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+						The current link item
+					</a>
+					<a href="#" class="list-group-item list-group-item-action">A second link item</a>
+					<a href="#" class="list-group-item list-group-item-action">A third link item</a>
+					<a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+					<a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+				</div>
+			</div>
+		</div>*@
+		@foreach (var p in Model)
+		{
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-header">
+						@p.Title
+					</div>
+					<img src="@p.Image" class="card-img-top" alt="..." style="height:200px">
+					<div class="card-body">
+						<p class="card-text">@p.Description</p>
+					</div>
+					<div class="card-footer">
+						<label sytle="font-size: 20px; color:crimson"><b>@p.Price.ToString("0.00") TL</b></label>
+						<a asp-action="Details" asp-controller="Home" asp-route-id="@p.Id" class="btn btn-outline-info" style="float:right">Detay</a>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
