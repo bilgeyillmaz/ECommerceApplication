@@ -19,5 +19,5 @@ Asp.Net Core MVC 5.0 Project, Asp.Net Core Identity, Shopping Cart Operations, S
     }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBzAIL9bPrEQi1GwBZu5WblOHFrNEtcHI&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=myMap"></script>
     
